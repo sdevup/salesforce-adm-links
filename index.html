@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meus Projetos</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0f0f;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: linear-gradient(to right, #1f1f1f, #2a2a2a);
+      border-bottom: 1px solid #333;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #aaa;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #00bcd4;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #00bcd4;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    .links {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .links a {
+      flex: 1;
+      text-align: center;
+      background-color: #2a2a2a;
+      color: #00bcd4;
+      text-decoration: none;
+      padding: 0.6rem;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .links a:hover {
+      background-color: #00bcd4;
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Meus Projetos</h1>
+    <p>Explore os trabalhos que desenvolvi com dedicação e criatividade</p>
+  </header>
+
+  <!-- Sessão Sdev Links -->
+  <section>
+    <h2>Sdev Links</h2>
+    <div class="projects" id="sdevlinks"></div>
+  </section>
+
+  <!-- Sessão Front-end -->
+  <!-- <section>
+    <h2>Front-end</h2>
+    <div class="projects" id="frontend"></div>
+  </section> -->
+
+  <!-- Sessão Back-end -->
+  <!-- <section>
+    <h2>Back-end</h2>
+    <div class="projects" id="backend"></div>
+  </section> -->
+
+  <!-- Sessão Mobile -->
+  <!-- <section>
+    <h2>Mobile</h2>
+    <div class="projects" id="mobile"></div>
+  </section> -->
+
+  <!-- Sessão Data Science -->
+  <!-- <section>
+    <h2>Data Science</h2>
+    <div class="projects" id="datascience"></div>
+  </section> -->
+
+  <footer>
+    &copy; 2025 • Desenvolvido por sdevbr
+  </footer>
+
+  <script>
+    const projetos = {
+      sdevlinks: [
+        {
+          titulo: "Servidor 1",
+          descricao: "Ambiente de testes e ferramentas Sdev.",
+          link1: "https://sdev-tools.infinityfreeapp.com/home",
+          link2: "https://sdev-tools.infinityfreeapp.com/home"
+        },
+        {
+          titulo: "Servidor 2",
+          descricao: "Ambiente de testes e ferramentas Sdev.",
+          link1: "https://sdev-tools.infinityfreeapp.com/home",
+          link2: "https://sdev-tools.infinityfreeapp.com/home"
+        },
+        {
+          titulo: "Servidor 3",
+          descricao: "Ambiente de testes e ferramentas Sdev.",
+          link1: "https://sdev-tools.infinityfreeapp.com/home",
+          link2: "https://sdev-tools.infinityfreeapp.com/home"
+        },
+        {
+          titulo: "Servidor 4",
+          descricao: "Ambiente de testes e ferramentas Sdev.",
+          link1: "https://sdev-tools.infinityfreeapp.com/home",
+          link2: "https://sdev-tools.infinityfreeapp.com/home"
+        }
+      ],
+      frontend: [
+        {
+          titulo: "Portfolio Pessoal",
+          descricao: "Site responsivo para apresentar minhas habilidades e experiências.",
+          link1: "https://github.com/seuusuario/portfolio",
+          link2: "https://seuportfolio.com"
+        },
+        {
+          titulo: "Landing Page de Produtos",
+          descricao: "Página promocional com animações e layout moderno.",
+          link1: "https://github.com/seuusuario/landing-produtos",
+          link2: "https://landing-produtos.vercel.app"
+        }
+      ],
+      backend: [
+        {
+          titulo: "API de Usuários",
+          descricao: "REST API com autenticação JWT e banco MongoDB.",
+          link1: "https://github.com/seuusuario/user-api",
+          link2: "https://user-api-demo.com"
+        }
+      ],
+      mobile: [
+        {
+          titulo: "App de Tarefas",
+          descricao: "Aplicativo React Native para gerenciamento de tarefas.",
+          link1: "https://github.com/seuusuario/todo-mobile",
+          link2: "https://expo.dev/@seuusuario/todo-mobile"
+        }
+      ],
+      datascience: [
+        {
+          titulo: "Análise de Vendas",
+          descricao: "Notebook com visualizações e insights de dados comerciais.",
+          link1: "https://github.com/seuusuario/vendas-analise",
+          link2: "https://nbviewer.org/github/seuusuario/vendas-analise/blob/main/analise.ipynb"
+        }
+      ]
+    };
+
+    Object.entries(projetos).forEach(([categoria, lista]) => {
+      const container = document.getElementById(categoria);
+      lista.forEach(proj => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <h3>${proj.titulo}</h3>
+          <p>${proj.descricao}</p>
+          <div class="links">
+            <a href="${proj.link1}" target="_blank">Link 1</a>
+            <a href="${proj.link2}" target="_blank">Link 2</a>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    });
+  </script>
+
+</body>
+</html>
